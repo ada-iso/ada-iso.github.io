@@ -27,33 +27,35 @@
 <div id="content">
 <h3>TABLE OF CONTENTS</h3>
 <ul>
-<li>1. <a href="#robo43">ISO.Currencies.Currency/Withdraw_Dates</a></li>
-<li>2. <a href="#robo42">ISO.Currencies.Currency/Withdraw_Date</a></li>
-<li>3. <a href="#robo41">ISO.Currencies.Currency/Unit</a></li>
-<li>4. <a href="#robo40">ISO.Currencies.Currency/Symbol</a></li>
-<li>5. <a href="#robo39">ISO.Currencies.Currency/Numeric</a></li>
-<li>6. <a href="#robo38">ISO.Currencies.Currency/Name</a></li>
-<li>7. <a href="#robo37">ISO.Currencies.Currency/Is_Historic</a></li>
-<li>8. <a href="#robo36">ISO.Currencies.Currency/Is_Fund</a></li>
-<li>9. <a href="#robo35">ISO.Currencies.Currency/Historic_Records</a></li>
-<li>10. <a href="#robo34">ISO.Currencies.Currency/Historic_Numerics</a></li>
-<li>11. <a href="#robo33">ISO.Currencies.Currency/Historic_Name</a></li>
-<li>12. <a href="#robo32">ISO.Currencies.Currency/Historic_Entities</a></li>
-<li>13. <a href="#robo31">ISO.Currencies.Currency/Entities</a></li>
-<li>14. <a href="#robo30">ISO.Currencies.Currency/Code</a></li>
-<li>15. <a href="#robo1">ISO/Currencies</a></li>
+<li>1. <a href="#robo1">ISO/Currencies</a></li>
 <ul>
-<li>15.1. <a href="#robo9">Currencies/ISO.Currencies.All_Currencies</a></li>
-<li>15.2. <a href="#robo10">Currencies/ISO.Currencies.Alphabetic_Code</a></li>
-<li>15.3. <a href="#robo11">Currencies/ISO.Currencies.Currency_Key</a></li>
-<li>15.4. <a href="#robo12">Currencies/ISO.Currencies.Currency_List</a></li>
-<li>15.5. <a href="#robo13">Currencies/ISO.Currencies.Minor_Unit</a></li>
-<li>15.6. <a href="#robo14">Currencies/ISO.Currencies.Numeric_Code</a></li>
-<li>15.7. <a href="#robo15">Currencies/ISO.Currency.Country</a></li>
-<li>15.8. <a href="#robo21">Currencies/ISO.Currencies.From_Code</a></li>
-<li>15.9. <a href="#robo22">Currencies/ISO.Currencies.From_Country</a></li>
-<li>15.10. <a href="#robo23">Currencies/ISO.Currencies.From_Numeric</a></li>
-<li>15.11. <a href="#robo24">Currencies/ISO.Currencies.Init_Currencies</a></li>
+<li>1.1. <a href="#robo9">Currencies/ISO.Currencies.All_Currencies</a></li>
+<li>1.2. <a href="#robo10">Currencies/ISO.Currencies.Alphabetic_Code</a></li>
+<li>1.3. <a href="#robo11">Currencies/ISO.Currencies.Currency</a></li>
+<ul>
+<li>1.3.1. <a href="#robo30">ISO.Currencies.Currency/Code</a></li>
+<li>1.3.2. <a href="#robo31">ISO.Currencies.Currency/Entities</a></li>
+<li>1.3.3. <a href="#robo32">ISO.Currencies.Currency/Historic_Entities</a></li>
+<li>1.3.4. <a href="#robo33">ISO.Currencies.Currency/Historic_Name</a></li>
+<li>1.3.5. <a href="#robo34">ISO.Currencies.Currency/Historic_Numerics</a></li>
+<li>1.3.6. <a href="#robo35">ISO.Currencies.Currency/Historic_Records</a></li>
+<li>1.3.7. <a href="#robo36">ISO.Currencies.Currency/Is_Fund</a></li>
+<li>1.3.8. <a href="#robo37">ISO.Currencies.Currency/Is_Historic</a></li>
+<li>1.3.9. <a href="#robo38">ISO.Currencies.Currency/Name</a></li>
+<li>1.3.10. <a href="#robo39">ISO.Currencies.Currency/Numeric</a></li>
+<li>1.3.11. <a href="#robo40">ISO.Currencies.Currency/Symbol</a></li>
+<li>1.3.12. <a href="#robo41">ISO.Currencies.Currency/Unit</a></li>
+<li>1.3.13. <a href="#robo42">ISO.Currencies.Currency/Withdraw_Date</a></li>
+<li>1.3.14. <a href="#robo43">ISO.Currencies.Currency/Withdraw_Dates</a></li>
+</ul>
+<li>1.4. <a href="#robo12">Currencies/ISO.Currencies.Currency_Key</a></li>
+<li>1.5. <a href="#robo13">Currencies/ISO.Currencies.Currency_List</a></li>
+<li>1.6. <a href="#robo14">Currencies/ISO.Currencies.Minor_Unit</a></li>
+<li>1.7. <a href="#robo15">Currencies/ISO.Currencies.Numeric_Code</a></li>
+<li>1.8. <a href="#robo21">Currencies/ISO.Currencies.From_Code</a></li>
+<li>1.9. <a href="#robo22">Currencies/ISO.Currencies.From_Country</a></li>
+<li>1.10. <a href="#robo23">Currencies/ISO.Currencies.From_Numeric</a></li>
+<li>1.11. <a href="#robo24">Currencies/ISO.Currencies.Init_Currencies</a></li>
 </ul>
 </ul>
 <hr />
@@ -103,8 +105,50 @@
 </pre>
 
 <hr />
+<a name="Currencies2fISO2eCurrencies2eCurrency"></a>
+<a name="robo11"></a><h2>Currencies/ISO.Currencies.Currency [ Types ]</h2>
+
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">Currencies</a> ] [ <a href="./robo_types.html#robo_top_of_doc">Types</a> ]</p>
+<p class="item_name">DESCRIPTION</p>
+<pre>    The ISO 4217 currency to be referenced.  When initializing, you can
+    set the key to Currency_Key that will be utilizeed one of the functions
+    to access the Currency
+</pre>
+<p class="item_name">SOURCE</p>
+<pre class="source">   <span class="keyword">type</span> Currency <span class="keyword">is</span> <span class="keyword">tagged</span> <span class="keyword">record</span>
+      Key <span class="sign">:</span> Currency_Key <span class="sign">:</span><span class="sign">=</span> C_ZZZ<span class="sign">;</span>
+   <span class="keyword">end</span> <span class="keyword">record</span><span class="sign">;</span>
+</pre>
+<p class="item_name">USAGE</p>
+<pre class="source">   <span class="sign">-</span><span class="sign">-</span>    My_Currency <span class="sign">:</span> Currency <span class="sign">:</span><span class="sign">=</span> <span class="sign">(</span>C_USD<span class="sign">)</span><span class="sign">;</span> <span class="sign">-</span><span class="sign">-</span>  This <span class="keyword">is</span> the US Doller<span class="sign">.</span>
+</pre>
+<p class="item_name">EXAMPLE</p>
+<pre class="source">   <span class="sign">-</span><span class="sign">-</span>    <span class="sign">-</span><span class="sign">-</span>  To create a currency <span class="keyword">and</span> initalize it to the US Doller<span class="sign">,</span>
+   <span class="sign">-</span><span class="sign">-</span>    <span class="sign">-</span><span class="sign">-</span>  <span class="keyword">then</span> reference it like so<span class="sign">:</span>
+   <span class="sign">-</span><span class="sign">-</span>    My_Currency <span class="sign">:</span> Currency <span class="sign">:</span><span class="sign">=</span> <span class="sign">(</span>C_USD<span class="sign">)</span><span class="sign">;</span> <span class="sign">-</span><span class="sign">-</span>  This <span class="keyword">is</span> the USA<span class="sign">.</span>
+   <span class="sign">-</span><span class="sign">-</span>    <span class="sign">-</span><span class="sign">-</span>  To <span class="keyword">access</span> the currency<span class="squote">'s name, do so like so:
+   --    My_Currency.<a href="./iso-countries_ads.html#robo28">Name</a> --  "US Doller"
+</pre>
+<p class="item_name">METHODS</p>
+<pre>  * <strong>ISO.Currencies.Currency</strong>/<a href="./iso-countries_ads.html#robo28">Name</a>
+  * <strong>ISO.Currencies.Currency</strong>/<a href="#robo30">Code</a>
+  * <strong>ISO.Currencies.Currency</strong>/<a href="./iso-countries_ads.html#robo29">Numeric</a>
+  * <strong>ISO.Currencies.Currency</strong>/<a href="#robo41">Unit</a>
+  * <strong>ISO.Currencies.Currency</strong>/<a href="#robo40">Symbol</a>
+  * <strong>ISO.Currencies.Currency</strong>/<a href="#robo36">Is_Fund</a>
+  * <strong>ISO.Currencies.Currency</strong>/<a href="#robo37">Is_Historic</a>
+  * <strong>ISO.Currencies.Currency</strong>/<a href="#robo33">Historic_Name</a>
+  * <strong>ISO.Currencies.Currency</strong>/Historic_Numbers
+  * <strong>ISO.Currencies.Currency</strong>/<a href="#robo42">Withdraw_Date</a>
+  * <strong>ISO.Currencies.Currency</strong>/<a href="#robo43">Withdraw_Dates</a>
+  * <strong>ISO.Currencies.Currency</strong>/<a href="#robo32">Historic_Entities</a>
+  * <strong>ISO.Currencies.Currency</strong>/<a href="#robo35">Historic_Records</a>
+  * <strong>ISO.Currencies.Currency</strong>/<a href="#robo31">Entities</a>
+</pre>
+
+<hr />
 <a name="Currencies2fISO2eCurrencies2eCurrency5fKey"></a>
-<a name="robo11"></a><h2>Currencies/ISO.Currencies.Currency_Key [ Types ]</h2>
+<a name="robo12"></a><h2>Currencies/ISO.Currencies.Currency_Key [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">Currencies</a> ] [ <a href="./robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">DESCRIPTION</p>
@@ -428,7 +472,7 @@
 
 <hr />
 <a name="Currencies2fISO2eCurrencies2eCurrency5fList"></a>
-<a name="robo12"></a><h2>Currencies/ISO.Currencies.Currency_List [ Types ]</h2>
+<a name="robo13"></a><h2>Currencies/ISO.Currencies.Currency_List [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">Currencies</a> ] [ <a href="./robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">DESCRIPTION</p>
@@ -448,7 +492,7 @@
 
 <hr />
 <a name="Currencies2fISO2eCurrencies2eMinor5fUnit"></a>
-<a name="robo13"></a><h2>Currencies/ISO.Currencies.Minor_Unit [ Types ]</h2>
+<a name="robo14"></a><h2>Currencies/ISO.Currencies.Minor_Unit [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">Currencies</a> ] [ <a href="./robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">DESCRIPTION</p>
@@ -467,7 +511,7 @@
 
 <hr />
 <a name="Currencies2fISO2eCurrencies2eNumeric5fCode"></a>
-<a name="robo14"></a><h2>Currencies/ISO.Currencies.Numeric_Code [ Types ]</h2>
+<a name="robo15"></a><h2>Currencies/ISO.Currencies.Numeric_Code [ Types ]</h2>
 
 <p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">Currencies</a> ] [ <a href="./robo_types.html#robo_top_of_doc">Types</a> ]</p>
 <p class="item_name">DESCRIPTION</p>
@@ -480,48 +524,6 @@
 </pre>
 <p class="item_name">DERIVED FROM</p>
 <pre>    Natural
-</pre>
-
-<hr />
-<a name="Currencies2fISO2eCurrency2eCountry"></a>
-<a name="robo15"></a><h2>Currencies/ISO.Currency.Country [ Types ]</h2>
-
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo1">Currencies</a> ] [ <a href="./robo_types.html#robo_top_of_doc">Types</a> ]</p>
-<p class="item_name">DESCRIPTION</p>
-<pre>    The ISO 4217 currency to be referenced.  When initializing, you can
-    set the key to Currency_Key that will be utilizeed one of the functions
-    to access the Currency
-</pre>
-<p class="item_name">SOURCE</p>
-<pre class="source">   <span class="keyword">type</span> Currency <span class="keyword">is</span> <span class="keyword">tagged</span> <span class="keyword">record</span>
-      Key <span class="sign">:</span> Currency_Key <span class="sign">:</span><span class="sign">=</span> C_ZZZ<span class="sign">;</span>
-   <span class="keyword">end</span> <span class="keyword">record</span><span class="sign">;</span>
-</pre>
-<p class="item_name">USAGE</p>
-<pre class="source">   <span class="sign">-</span><span class="sign">-</span>    My_Currency <span class="sign">:</span> Currency <span class="sign">:</span><span class="sign">=</span> <span class="sign">(</span>C_USD<span class="sign">)</span><span class="sign">;</span> <span class="sign">-</span><span class="sign">-</span>  This <span class="keyword">is</span> the US Doller<span class="sign">.</span>
-</pre>
-<p class="item_name">EXAMPLE</p>
-<pre class="source">   <span class="sign">-</span><span class="sign">-</span>    <span class="sign">-</span><span class="sign">-</span>  To create a currency <span class="keyword">and</span> initalize it to the US Doller<span class="sign">,</span>
-   <span class="sign">-</span><span class="sign">-</span>    <span class="sign">-</span><span class="sign">-</span>  <span class="keyword">then</span> reference it like so<span class="sign">:</span>
-   <span class="sign">-</span><span class="sign">-</span>    My_Currency <span class="sign">:</span> Currency <span class="sign">:</span><span class="sign">=</span> <span class="sign">(</span>C_USD<span class="sign">)</span><span class="sign">;</span> <span class="sign">-</span><span class="sign">-</span>  This <span class="keyword">is</span> the USA<span class="sign">.</span>
-   <span class="sign">-</span><span class="sign">-</span>    <span class="sign">-</span><span class="sign">-</span>  To <span class="keyword">access</span> the currency<span class="squote">'s name, do so like so:
-   --    My_Currency.<a href="./iso-countries_ads.html#robo28">Name</a> --  "US Doller"
-</pre>
-<p class="item_name">METHODS</p>
-<pre>  * <a href="#robo1">Currencies</a>/ISO.<a href="#robo1">Currencies</a>.Currency/<a href="./iso-countries_ads.html#robo28">Name</a>
-  * <a href="#robo1">Currencies</a>/ISO.<a href="#robo1">Currencies</a>.Currency/<a href="#robo30">Code</a>
-  * <a href="#robo1">Currencies</a>/ISO.<a href="#robo1">Currencies</a>.Currency/<a href="./iso-countries_ads.html#robo29">Numeric</a>
-  * <a href="#robo1">Currencies</a>/ISO.<a href="#robo1">Currencies</a>.Currency/<a href="#robo41">Unit</a>
-  * <a href="#robo1">Currencies</a>/ISO.<a href="#robo1">Currencies</a>.Currency/<a href="#robo40">Symbol</a>
-  * <a href="#robo1">Currencies</a>/ISO.<a href="#robo1">Currencies</a>.Currency/<a href="#robo36">Is_Fund</a>
-  * <a href="#robo1">Currencies</a>/ISO.<a href="#robo1">Currencies</a>.Currency/<a href="#robo37">Is_Historic</a>
-  * <a href="#robo1">Currencies</a>/ISO.<a href="#robo1">Currencies</a>.Currency/<a href="#robo33">Historic_Name</a>
-  * <a href="#robo1">Currencies</a>/ISO.<a href="#robo1">Currencies</a>.Currency/Historic_Numbers
-  * <a href="#robo1">Currencies</a>/ISO.<a href="#robo1">Currencies</a>.Currency/<a href="#robo42">Withdraw_Date</a>
-  * <a href="#robo1">Currencies</a>/ISO.<a href="#robo1">Currencies</a>.Currency/<a href="#robo43">Withdraw_Dates</a>
-  * <a href="#robo1">Currencies</a>/ISO.<a href="#robo1">Currencies</a>.Currency/<a href="#robo32">Historic_Entities</a>
-  * <a href="#robo1">Currencies</a>/ISO.<a href="#robo1">Currencies</a>.Currency/<a href="#robo35">Historic_Records</a>
-  * <a href="#robo1">Currencies</a>/ISO.<a href="#robo1">Currencies</a>.Currency/<a href="#robo31">Entities</a>
 </pre>
 
 <hr />
@@ -615,7 +617,7 @@
 <a name="ISO2eCurrencies2eCurrency2fCode"></a>
 <a name="robo30"></a><h2>ISO.Currencies.Currency/Code [ Methods ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo11">ISO.Currencies.Currency</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Code</strong> <span class="sign">(</span>This <span class="sign">:</span> Currency<span class="sign">)</span> <span class="keyword">return</span> Alphabetic_Code<span class="sign">;</span>
 </pre>
@@ -634,7 +636,7 @@
 <a name="ISO2eCurrencies2eCurrency2fEntities"></a>
 <a name="robo31"></a><h2>ISO.Currencies.Currency/Entities [ Methods ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo11">ISO.Currencies.Currency</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Entities</strong> <span class="sign">(</span>This <span class="sign">:</span> Currency<span class="sign">)</span> <span class="keyword">return</span> <a href="./iso-countries_ads.html#robo0">Countries</a><span class="sign">.</span>Country_List<span class="sign">;</span>
 </pre>
@@ -653,7 +655,7 @@
 <a name="ISO2eCurrencies2eCurrency2fHistoric5fEntities"></a>
 <a name="robo32"></a><h2>ISO.Currencies.Currency/Historic_Entities [ Methods ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo11">ISO.Currencies.Currency</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Historic_Entities</strong> <span class="sign">(</span>This <span class="sign">:</span> Currency<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
@@ -675,7 +677,7 @@
 <a name="ISO2eCurrencies2eCurrency2fHistoric5fName"></a>
 <a name="robo33"></a><h2>ISO.Currencies.Currency/Historic_Name [ Methods ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo11">ISO.Currencies.Currency</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> Historic_Names <span class="sign">(</span>This <span class="sign">:</span> Currency<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
@@ -694,7 +696,7 @@
 <a name="ISO2eCurrencies2eCurrency2fHistoric5fNumerics"></a>
 <a name="robo34"></a><h2>ISO.Currencies.Currency/Historic_Numerics [ Methods ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo11">ISO.Currencies.Currency</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Historic_Numerics</strong> <span class="sign">(</span>This <span class="sign">:</span> Currency<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
@@ -713,7 +715,7 @@
 <a name="ISO2eCurrencies2eCurrency2fHistoric5fRecords"></a>
 <a name="robo35"></a><h2>ISO.Currencies.Currency/Historic_Records [ Methods ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo11">ISO.Currencies.Currency</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Historic_Records</strong> <span class="sign">(</span>This <span class="sign">:</span> Currency<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
@@ -735,7 +737,7 @@
 <a name="ISO2eCurrencies2eCurrency2fIs5fFund"></a>
 <a name="robo36"></a><h2>ISO.Currencies.Currency/Is_Fund [ Methods ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo11">ISO.Currencies.Currency</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Is_Fund</strong> <span class="sign">(</span>This <span class="sign">:</span> Currency<span class="sign">)</span> <span class="keyword">return</span> Boolean<span class="sign">;</span>
 </pre>
@@ -760,7 +762,7 @@
 <a name="ISO2eCurrencies2eCurrency2fIs5fHistoric"></a>
 <a name="robo37"></a><h2>ISO.Currencies.Currency/Is_Historic [ Methods ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo11">ISO.Currencies.Currency</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Is_Historic</strong> <span class="sign">(</span>This <span class="sign">:</span> Currency<span class="sign">)</span> <span class="keyword">return</span> Boolean<span class="sign">;</span>
 </pre>
@@ -786,7 +788,7 @@
 <a name="ISO2eCurrencies2eCurrency2fName"></a>
 <a name="robo38"></a><h2>ISO.Currencies.Currency/Name [ Methods ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo11">ISO.Currencies.Currency</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Name</strong> <span class="sign">(</span>This <span class="sign">:</span> Currency<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
@@ -805,7 +807,7 @@
 <a name="ISO2eCurrencies2eCurrency2fNumeric"></a>
 <a name="robo39"></a><h2>ISO.Currencies.Currency/Numeric [ Methods ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo11">ISO.Currencies.Currency</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Numeric</strong> <span class="sign">(</span>This <span class="sign">:</span> Currency<span class="sign">)</span> <span class="keyword">return</span> Numeric_Code<span class="sign">;</span>
 </pre>
@@ -824,7 +826,7 @@
 <a name="ISO2eCurrencies2eCurrency2fSymbol"></a>
 <a name="robo40"></a><h2>ISO.Currencies.Currency/Symbol [ Methods ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo11">ISO.Currencies.Currency</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Symbol</strong> <span class="sign">(</span>This <span class="sign">:</span> Currency<span class="sign">)</span> <span class="keyword">return</span> Wide_Wide_String<span class="sign">;</span>
    <span class="keyword">function</span> <strong>Symbol</strong> <span class="sign">(</span>This <span class="sign">:</span> Currency<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
@@ -851,7 +853,7 @@
 <a name="ISO2eCurrencies2eCurrency2fUnit"></a>
 <a name="robo41"></a><h2>ISO.Currencies.Currency/Unit [ Methods ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo11">ISO.Currencies.Currency</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Unit</strong> <span class="sign">(</span>This <span class="sign">:</span> Currency<span class="sign">)</span> <span class="keyword">return</span> Minor_Unit<span class="sign">;</span>
 </pre>
@@ -871,7 +873,7 @@
 <a name="ISO2eCurrencies2eCurrency2fWithdraw5fDate"></a>
 <a name="robo42"></a><h2>ISO.Currencies.Currency/Withdraw_Date [ Methods ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo11">ISO.Currencies.Currency</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Withdraw_Date</strong> <span class="sign">(</span>This <span class="sign">:</span> Currency<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
@@ -892,7 +894,7 @@
 <a name="ISO2eCurrencies2eCurrency2fWithdraw5fDates"></a>
 <a name="robo43"></a><h2>ISO.Currencies.Currency/Withdraw_Dates [ Methods ]</h2>
 
-<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
+<p>[ <a href="#robo_top_of_doc">Top</a> ] [ <a href="#robo11">ISO.Currencies.Currency</a> ] [ <a href="./robo_methods.html#robo_top_of_doc">Methods</a> ]</p>
 <p class="item_name">SOURCE</p>
 <pre class="source">   <span class="keyword">function</span> <strong>Withdraw_Dates</strong> <span class="sign">(</span>This <span class="sign">:</span> Currency<span class="sign">)</span> <span class="keyword">return</span> String<span class="sign">;</span>
 </pre>
@@ -909,7 +911,7 @@
 
 </div> <!-- content -->
 <div id="footer">
-<p>Generated from ./src/iso-currencies.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.44 on 2023-05-15 19:11:11</p>
+<p>Generated from ./src/iso-currencies.ads with <a href="http://www.xs4all.nl/~rfsber/Robo/robodoc.html">ROBODoc</a> V4.99.44 on 2023-05-15 19:15:28</p>
 </div> <!-- footer -->
 </body>
 </html>
